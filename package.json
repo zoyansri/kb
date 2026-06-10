@@ -1,6 +1,5 @@
 {
   "homepage": "https://github.io",
-  "base": "./"
   "name": "kanban-board",
   "version": "0.1.0",
   "private": true,
