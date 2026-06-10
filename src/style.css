@@ -1,0 +1,211 @@
+body{
+    padding: 20px;
+    background-color: #ca6180;
+    color: #fefd99;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+#kanban{
+    display: flex;
+    flex-wrap: wrap;
+}
+.button{
+    border: solid black 1px;
+    padding: 10px 70px;
+    background-color: rgb(198, 211, 104);
+    color: rgb(98, 85, 85);
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px 25px;
+    border-radius: 5px;
+}
+.kanban-column{
+    border: 1px solid black;
+    width:24%;
+    display: inline-block;
+    height: 80vh;
+    text-align: left;
+    overflow-y: auto;
+    margin: 5px;
+    vertical-align: top;
+    background-color: rgb(63, 119, 169);
+}
+h1{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+}
+h2{
+    margin: 0;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid black;
+    padding-left: 10px;
+    background-color: rgb(51, 137, 234);
+    z-index: 1;
+}
+.kanban-card{
+    border: 1px solid black;
+    margin: 10px;
+    width: 19vw;
+    background-color: rgb(214, 129, 174);
+    color: rgb(29, 27, 27);
+    border-radius: 3px;
+    height : 8vh;
+    padding: 4px 6px 0px 6px;
+    transition: transform 0.2s ease;
+}
+.kanban-card:hover {
+    transform: scale(1.02);
+}
+
+.view{
+    justify-content: center;
+    text-align: center;
+    background-color: #73a5ca;
+    color: #faf1f6;
+}
+
+.list, .timeline{
+    width: 100%;
+    border: 1px solid black;    
+}
+
+table{
+    width: 100%;
+}
+
+.list-table th, .list-table td:first-child{
+    background-color: rgb(51, 137, 234);
+}
+.list-table td{
+    border-top:1px solid black;
+    background-color: rgb(63, 119, 169);
+}
+h4{
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: center;
+}
+
+
+.kanban-column.staging {
+    
+  flex: 1 0 100%;   /* force staging to take full row */
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  height: 24%;     /* staging shouldn’t be locked to 80vh */
+}
+
+.kanban-column.staging .staging-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.kanban-column.staging .kanban-card {
+  width: 200px;   /* fixed width so multiple fit in a row */
+  height: auto;
+}
+
+.person-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.profile{
+    margin-right: 10px;
+}
+
+.line{
+    display:inline-block;
+}
+
+.line-first,.line-second{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.task-name,.person-info{
+    text-align: left;
+}
+.due-date,.priority{
+    text-align: right;
+}
+
+/* ✅ NEW: Gantt table styling */
+.gantt {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.gantt th, .gantt td {
+  border: none;
+  text-align: center; 
+  background-color: rgb(63, 119, 169);
+}
+
+.gantt th {
+    border: 1px solid black;
+  background: rgb(51, 137, 234);
+}
+.gantt td:first-child {
+    border-right: 1px solid black;
+    background-color: rgb(51, 137, 234);
+}
+
+/* ✅ Priority colors remain */
+.bar.high { background-color: red; }
+.bar.medium { background-color: orange; }
+.bar.low { background-color: green; }
+
+
+.bar {
+  position: relative;
+  height: 20px;
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+}
+
+.staging-area {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+.staging-controls {
+  width: 10%;            /* occupy 10% */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  
+}
+
+.staging-controls button {
+  border-radius: 50%;
+  border: none;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  color:rgb(98, 85, 85);
+  background-color: rgb(198, 211, 104);
+}
+
+.staging-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+
